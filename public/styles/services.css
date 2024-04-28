@@ -1,0 +1,254 @@
+@import url('variables.css');
+
+@keyframes animateCard {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*for carousel*/
+
+div.carousel_navigation {
+    display: flex;
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+div.carousel_navigation > button {
+    margin-top: -30px;
+    outline: unset;
+    border: unset;
+    background-color: transparent;
+}
+
+button.carousel_nav:hover {
+    transition: 0.05s ease-in;
+    cursor: pointer;
+}
+
+button.carousel_nav > svg {
+    fill: black;
+    transform: scale(2);
+}
+
+
+div.carousel {
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+div.inner {
+    margin: auto;
+    width: 450px;
+    height: 500px; 
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+div.carousel > button {
+    outline: unset;
+    border: unset;
+}
+
+
+/**/
+
+div.service {
+    box-shadow: 0px 0px 20px var(--primary-font-color);
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    /*top: 50%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 320px;
+    border: 2px dashed var(--mobile-font-color);
+    border-radius: 2px;
+    opacity: 1;
+    padding-bottom: 1rem;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-name: animateCard;
+}
+
+div.services_preview > * {
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+div.services_preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+div.services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#services_heading {
+    justify-self: center;
+}
+
+
+#services_heading, div.services_preview > p, div.contact_us > h2 {
+    color: var(--mobile-font-color);
+}
+
+h2.services_heading {
+    color: var(--mobile-font-color);
+}
+
+div.service_hero {
+    width: 100%;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+h2.service_inner_heading {
+    text-align: center;
+    color: var(--primary-font-color);
+    font-size: 1.2rem;
+}
+
+div.service_hero {
+    background-size: 100% 150px;
+}
+
+div.text {
+    margin: 0;
+    color: var(--mobile-font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+div.text > p {
+    padding-inline: 5px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: var(--secondary-font);
+}
+
+div.service > a  {
+    align-self: center;
+    transform: scale(0.8);
+}
+
+
+
+/* for background images */
+div.furniture {
+    background-image: url('../furniture.jpg');
+}
+
+div.gifts {
+    background-image: url('../wedding.jpg');
+}
+
+div.colors {
+    background-image: url('../colors.jpg');
+}
+
+div.wedding {
+    background-image: url('../wedding_crown.jpg');   
+}  
+
+div.seminars {
+    background-image: url('../seminars.jpg');
+}
+/* end of background images */
+
+
+
+div.contact_us {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+div.contact_us > a:hover {
+    color: var(--primary-font-color);
+}
+
+#contact_us_btn {
+    outline: unset;
+    border: unset;
+    font-size: 1.3rem;
+    background-color: var(--primary-font-color);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 2px;
+    width: min-content;
+    text-wrap: nowrap;
+}
+
+#contact_us_btn {
+    color: white;
+    margin: 0;
+}
+
+#contact_us_btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
+}
+
+@media screen and (min-width: 769px) {
+    div.service >  *, div.contact_us > h2 {
+        color: var(--desktop-font-color);
+    }
+
+    #contact_us_btn:hover {
+        cursor: pointer;
+        background-color: white;
+    }
+
+    #contact_us_btn:hover > a   {
+        color:  var(--primary-font-color);
+    }
+
+    h2.services_heading {
+        color: var(--desktop-font-color);
+    }
+
+    div.service {
+        border-color: var(--desktop-font-color);
+        box-shadow: 0px 0px 6px white;
+    }
+
+    div.services {
+        margin: auto;
+    }
+
+    button.carousel_nav > svg {
+        fill: white;
+        transform: scale(2);
+    }
+    
+
+}

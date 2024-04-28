@@ -1,0 +1,164 @@
+@import url('variables.css');
+
+header {
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    height: min-content;
+    background-color: white;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+header > * {
+    font-family: var(--primary_font);
+}
+
+div.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.logo, div.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_home {
+    display: flex;
+    align-items: center;
+}
+
+.nav_home > p {
+    color: var(--primary-font-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#nav_logo {
+    width: 84px;
+}
+
+#hamburger {
+    width: 52px;
+}
+
+div.links {
+    height: 100vh;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:var(--primary-bg-color);
+    padding: 2rem;
+    flex-direction: column;
+}
+
+div.links > ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    gap: 1rem;
+}
+
+
+
+/*for responsive transition from mobile to pc*/
+@media screen and (min-width: 769px) {
+
+    header,body {
+        background-color: var(--primary-bg-color);
+    }
+
+    div.hamburger {
+        display: none;
+    }
+    
+    div.links {
+        position: unset;
+        display: flex;
+        height: min-content;
+        width: min-content;
+        text-wrap: nowrap;
+        background-color: unset;
+    }
+
+    div.links > ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #close, div.attribution > p {
+        display: none;
+    }
+
+    div.links > ul > li >  a {
+        font-size: 1.4rem;
+    }
+}
+/*end of responsive*/
+
+div.links > ul > li:hover div.line {
+    visibility: visible;
+    width: 100%;
+}
+
+div.line {
+    transition: width 0.2s ease-in;
+    width: 0%;
+    visibility: hidden;
+    border: 1px solid var(--primary-font-color);
+}
+div.links > ul > li {
+    width: min-content;
+    text-wrap: nowrap;
+}
+
+
+div.links > ul > li >  a {
+    color: var(--primary-font-color);
+    font-size: 1.3rem;
+}
+
+#hamburger:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#close {
+    width: 52px;
+}
+
+#close:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+div.attribution {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.attribution > p {
+    color: white;
+    font-size: 1rem;
+}
+
+div.attribution > p > a {
+    font-style: italic;
+    color: var(--primary-font-color);
+    font-size: 0.9rem;
+}
+
+div.attribution > p > a:hover {
+    color: var(--font-color-hover);
+}   

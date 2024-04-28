@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+:root {
+    --font-color: #e8681f;
+    --primary-font-color: #e8681f;
+    --desktop-font-color: #c8ccda;
+    --mobile-font-color: black;
+    --primary-font: "Lato", sans-serif;
+    --secondary-font: "Sedan", serif;
+    --primary-bg-color: #132839;
+    --font-color-hover: #e2b70d;
+}

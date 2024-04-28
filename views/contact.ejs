@@ -1,0 +1,34 @@
+<%- include('./templates/navbar.ejs'); -%>
+<script defer src="handleSubmit.js"></script>
+<script defer src="animateForm.js"></script>
+<div class="contact_container">
+    <div class="form_submittion_message">
+        <p id="submittion_message"></p>
+    </div>
+    <div class="form">
+        <h2>Επικοινωνήστε μαζί μας.</h2>
+        <form id="contact_form">
+            <div class="field">
+                <label for="name">Όνομα</label>
+                <input id="name" type="text" autocomplete="off" required>
+            </div>
+            
+            <div class="field">
+                <label for="surname">Επώνυμο</label>
+                <input id="surname" type="text" autocomplete="off"  required />
+            </div>
+            
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" autocomplete="off"  required/>
+            </div>
+
+            <div class="field">
+                <label for="message">Μήνυμα</label>
+                <input id="message" name="message" type="text" autocomplete="off" required />
+            </div>
+            <button id="contact_btn"><p>Αποστολή</p><div class="loader"></div></button>
+        </form>
+    </div>
+</div>
+<%- include('./templates/footer.ejs'); -%>
