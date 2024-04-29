@@ -13,13 +13,15 @@ const hideSubmittionMessage = () => {
 
 //display the appropriate message when the form is submitted.
 const displaySubmittionMessage = (s) => {
-    form_submittion_message_div.style.backgroundColor = 'rgb(73, 216, 73)'
-    form_submittion_message_div.style.borderLeftColor = 'rgb(1, 148, 1)'
-
-    if (s === false) {
+    if (s === true) {
+        form_submittion_message_div.style.backgroundColor = 'rgb(73, 216, 73)'
+        form_submittion_message_div.style.borderLeftColor = 'rgb(1, 148, 1)'
+    }
+    else {
         form_submittion_message_div.style.backgroundColor = 'rgb(242, 69, 69)'
         form_submittion_message_div.style.borderLeftColor = 'rgb(248, 23, 23)'
-    }
+   }
+    
     form_submittion_message_div.style.display = 'flex'
     hideSubmittionMessage()
 }
@@ -49,7 +51,8 @@ form.addEventListener('submit', async (e) => {
     const surname = form.querySelector('input#surname').value.toUpperCase()
     const email = form.querySelector('input#email').value
     const message = form.querySelector('input#message').value
-    submittion_success = undefined
+    submittion_success = false
+    let current_res
 
     fetch('/contact', {
         method: "POST",
@@ -62,12 +65,13 @@ form.addEventListener('submit', async (e) => {
     .then(res => {
         //stopping animation due to succesfull contact form submittion.
         form_submittion_message.textContent = res.message
-        submittion_success = true
-        hideLoader(submittion_success)
+        console.log(Object(res))
+        //in order to handle it in the catch block assigning it to a global variable because res is out of scope.
+        current_res = Object.assign(res)
+        hideLoader(current_res.success)
     })
     .catch(e => {
-        form_submittion_message.textContent = e.message
-        submittion_success = false
-        hideLoader(submittion_success)
+        form_submittion_message.textContent = current_res.message
+        hideLoader(current_res.success)
     })
 })

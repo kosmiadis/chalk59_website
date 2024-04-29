@@ -11,7 +11,6 @@ div.loader {
     height: 20px;
     display: none;
     animation: spin 1s linear infinite;
-    margin: 20px auto;
 }
 
 div.form_submittion_message {
@@ -104,12 +103,16 @@ textarea {
     outline: unset;
     border: unset;
     background-color: white;
-    width: min-content;
+    width: 150px;
     padding: 1rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
     margin: auto;
     border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact_btn > p {
