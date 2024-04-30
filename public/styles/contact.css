@@ -25,7 +25,8 @@ div.form_submittion_message {
     border-left-style: solid;
     border-left-color: unset;
     padding: .7rem;
-    width: 340px;
+    width: 100%;
+    max-width: 280px;
     margin-bottom: 1rem;
 
 }

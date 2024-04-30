@@ -1,6 +1,5 @@
 @import url('variables.css');
 
-
 #hero_logo::selection {
     background-color: transparent;
 }
@@ -37,23 +36,6 @@ p.hero_welcome {
     font-weight: 600;
     text-wrap: nowrap;
 }
-
-div.box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-div.box:nth-of-type(1) {
-    top: -5px;
-    left: -20px;
-    background-color: orange;
-}
-
-div.box:first-of-type {
-    background-color: var(--primary-bg-color);
-}
-
 span#brand {
     font-size: 1.5rem;
     color: var(--primary-font-color);
@@ -61,7 +43,7 @@ span#brand {
 }
 
 div.hero {
-    padding: 2rem;
+    padding: 3rem;
     margin-inline: auto;
     width: 100%;
     max-width: 1000px;
@@ -130,7 +112,6 @@ div.hero > div.services {
     }
 
     p.hero_welcome {
-        color: var(--desktop-font-color);
         font-size: 1.4rem;
     }
 
@@ -145,6 +126,5 @@ div.hero > div.services {
 
     #services_heading {
         background-color: white;
-        color: var(--desktop-font-color);
     }
 }

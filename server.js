@@ -10,7 +10,6 @@ const emailCheck = require('email-check')
 let date
 let year
 
-
 app.use(express.json())
 app.use(express.static('public'))
 app.use(express.static('public/styles'))
