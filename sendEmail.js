@@ -1,4 +1,4 @@
-//configuring .env file that contains the variables.
+//configuring .env file that contains the variables
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -22,7 +22,11 @@ module.exports.sendEmailResponse = async (name, email) => {
         from: process.env.host_email,
         to: email,
         subject: 'Chalk59 Επικοινωνία ',
-        text: `Καλησπέρα σας ${name}, λάβαμε το Email σας και είμαστε πρόθυμοι να σας εξυπηρετήσουμε. Θα σας ενημερώσουμε με νεότερα σύντομα!`
+        text: `Καλησπέρα σας ${name}, 
+        \n Λάβαμε το Email σας και είμαστε πρόθυμοι να σας εξυπηρετήσουμε!
+        \n Θα σας ενημερώσουμε με νεότερα σύντομα!
+        Με εκτίμηση Chalk59 
+        \n`
       };
       
       transporter.sendMail(mailOptions, function(error, info){
@@ -40,12 +44,13 @@ module.exports.newMessageEmail = async (name, surname, email, message) => {
   console.log('Recipient email:', process.env.host_email);
     console.log('Host email:', process.env.host_email);
 
+
     return new Promise((resolve, reject) => {
       const mailOptions = {
         from: process.env.host_email,
         to: process.env.host_email,
         subject: 'Νέα συμπλήρωση φόρμας!',
-        text: `O ενδιαφερόμενος με ονοματεπώνυμο ${name} ${surname} και προσωπικό email ${email} έστειλε το ακόλουθο μήνυμα: \n ${message}`
+        text: `O ενδιαφερόμενος με ονοματεπώνυμο ${name} ${surname} \n Προσωπικό Email: ${email} \n \n Έστειλε το ακόλουθο μήνυμα: \n ${message}`
       }
       
       transporter.sendMail(mailOptions, function(error, info){

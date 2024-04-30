@@ -38,14 +38,14 @@ button.carousel_nav > svg {
 
 div.carousel {
     margin: auto;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    max-width: 280px;
     position: relative;
 }
 
 div.inner {
     margin: auto;
-    width: 450px;
+    width: 100%;
     height: 500px; 
     transform-style: preserve-3d;
     display: flex;
@@ -61,7 +61,16 @@ div.carousel > button {
 
 /**/
 
+div.background_image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+
 div.service {
+    box-sizing: border-box;
     box-shadow: 0px 0px 20px var(--primary-font-color);
     align-self: center;
     justify-self: center;
@@ -70,8 +79,8 @@ div.service {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
-    width: 320px;
+    height: 450px;
+    width: 100%;
     border: 2px dashed var(--mobile-font-color);
     border-radius: 2px;
     opacity: 1;
@@ -159,23 +168,15 @@ div.service > a  {
 
 /* for background images */
 div.furniture {
-    background-image: url('../furniture.jpg');
-}
-
-div.gifts {
-    background-image: url('../wedding.jpg');
-}
-
-div.colors {
-    background-image: url('../colors.jpg');
+    background-image: url('../furniture.png');
 }
 
 div.wedding {
-    background-image: url('../wedding_crown.jpg');   
-}  
+    background-image: url('../wedding.png');
+}
 
-div.seminars {
-    background-image: url('../seminars.jpg');
+div.colors {
+    background-image: url('../colors.png');
 }
 /* end of background images */
 
@@ -204,6 +205,7 @@ div.contact_us > a:hover {
     border-radius: 2px;
     width: min-content;
     text-wrap: nowrap;
+    
 }
 
 #contact_us_btn {
@@ -249,5 +251,8 @@ div.contact_us > a:hover {
         transform: scale(2);
     }
     
+    div.carousel {
+        max-width: 320px;
+    }
 
 }

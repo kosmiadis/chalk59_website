@@ -72,11 +72,6 @@ div.links > ul {
 
 /*for responsive transition from mobile to pc*/
 @media screen and (min-width: 769px) {
-
-    header,body {
-        background-color: var(--primary-bg-color);
-    }
-
     div.hamburger {
         display: none;
     }

@@ -6,25 +6,42 @@ const app = express();
 const PORT = process.env.PORT || 8080
 const emailCheck = require('email-check')
 
+/*This changes automatically the copyright year date. */
+let date
+let year
+
+
 app.use(express.json())
 app.use(express.static('public'))
 app.use(express.static('public/styles'))
+app.use(express.static('public/scripts'))
+app.use(express.static('public/forCarousel'))
+
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.render('index', {page: 'Home'})
+    date = new Date()
+    year = date.getFullYear()
+
+    res.render('index', {page: 'Home', year: year})
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact', {page: 'Επικοινωνία'})
+    date = new Date()
+    year = date.getFullYear()
+    res.render('contact', {page: 'Επικοινωνία', year: year})
 })
 
 app.get('/services', (req, res) => {
-    res.render('services', {page: 'Υπηρεσίες'})
+    date = new Date()
+    year = date.getFullYear()
+    res.render('services', {page: 'Υπηρεσίες', year: year})
 })
 
 app.get('/gallery', (req, res) => {
-    res.render('gallery', {page: 'Gallery'})
+    date = new Date()
+    year = date.getFullYear()
+    res.render('gallery', {page: 'Gallery', year: year})
 })
 
 app.post('/contact', async (req, res) => {

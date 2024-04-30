@@ -1,0 +1,44 @@
+@keyframes preview_photo {
+    0% {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+div.photo_carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+div.inner {
+    outline: 2px solid;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+div.photo {
+    width: 100%;
+    position: absolute;
+    animation: preview_photo;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+div.photo > img {
+    width: 100%;
+}

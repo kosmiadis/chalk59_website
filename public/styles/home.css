@@ -17,9 +17,9 @@ div.home > * {
 
 #hero_logo {
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
 }
-
+        
 div.welcome {
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ p.hero_welcome {
     justify-self: center;
     color: white;
     border-radius: 2px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     text-wrap: nowrap;
 }
@@ -50,13 +50,9 @@ div.box:nth-of-type(1) {
     background-color: orange;
 }
 
-
-
 div.box:first-of-type {
     background-color: var(--primary-bg-color);
 }
-
-
 
 span#brand {
     font-size: 1.5rem;
@@ -77,8 +73,8 @@ article.paragraph {
     font-size: 1.1rem;
     color: var(--mobile-font-color);
     line-height: 1.6rem;
-    text-align: left;
-    border-left: 10px solid var(--primary-font-color);
+    text-align: center;
+    /*border-left: 10px solid var(--primary-font-color);*/
     padding-left: 12px;
 }
 
@@ -86,7 +82,6 @@ div.text {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 1.5rem;
     gap: 1.5rem;
 }
 
@@ -95,21 +90,21 @@ div.hero > div.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 
 #services_heading {
-    
-    font-size: 1.3rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-style: italic;
-    padding: 2px;
-    background-color: var(--primary-font-color);
+    padding: 4px;
+    margin-bottom: 2rem;
     color: var(--mobile-font-color);
 }
 
 #services_btn {
-    margin-top: 2rem;
     outline: unset;
     border: unset;
     font-size: 1.3rem;
@@ -118,6 +113,7 @@ div.hero > div.services {
     padding: 1rem 2rem;
     font-weight: 600;
     border-radius: 2px;
+    text-wrap: nowrap;
 }
 
 #services_btn:hover {
@@ -128,12 +124,6 @@ div.hero > div.services {
 
 @media screen and (min-width: 769px) {
 
-    #services_btn:hover {
-        cursor: pointer;
-        background-color: white;
-        color:  var(--primary-font-color);
-    }
-
     div.welcome {
         flex-direction: row;
         justify-content: center;
@@ -142,13 +132,6 @@ div.hero > div.services {
     p.hero_welcome {
         color: var(--desktop-font-color);
         font-size: 1.4rem;
-    }
-
-    article.paragraph {
-        padding: 10px;
-        color: var(--desktop-font-color);
-        text-align: unset;
-       
     }
 
     span#brand {

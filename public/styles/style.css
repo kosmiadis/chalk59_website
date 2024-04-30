@@ -2,6 +2,8 @@
 @import url('./home.css');
 @import url('./contact.css');
 @import url('./services.css');
+@import url('./photo_carousel.css');
+@import url('./footer.css');
 
 * a {
     text-decoration: none;
@@ -15,5 +17,4 @@ body, body > * {
 body {
     margin: 0;
     margin-inline: auto;
-    position: relative;
 }
