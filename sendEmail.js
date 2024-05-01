@@ -29,7 +29,7 @@ module.exports.sendEmailResponse = async (name, email) => {
         \n`
       };
       
-      transporter.sendMail(mailOptions, function(error, info){
+      transporter.sendMail(mailOptions, function(error,info){
         if (error) {
           reject(new Error({message: 'client email not sent'}))
         } else {
@@ -53,7 +53,7 @@ module.exports.newMessageEmail = async (name, surname, email, message) => {
         text: `O ενδιαφερόμενος με ονοματεπώνυμο ${name} ${surname} \n Προσωπικό Email: ${email} \n \n Έστειλε το ακόλουθο μήνυμα: \n ${message}`
       }
       
-      transporter.sendMail(mailOptions, function(error, info){
+      transporter.sendMail(mailOptions, function(error,info){
         if (error) {
           reject(new Error({message: 'email not recieved'}))
         } else {

@@ -103,6 +103,7 @@ app.post('/contact', async (req, res) => {
         }
     }
     catch (e) {
+        console.log(e)
         response.client_email_success = false
         response.owner_email_success = false
         response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'

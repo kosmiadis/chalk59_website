@@ -37,7 +37,7 @@ const hideLoader = (s) => {
     submit_p.style.display = 'block'
     loader.style.display = 'none'
     //display the corresponding message.
-    displaySubmittionMessage(submittion_success)
+    displaySubmittionMessage(s)
     form.reset();
 }
 
@@ -51,7 +51,6 @@ form.addEventListener('submit', async (e) => {
     const surname = form.querySelector('input#surname').value.toUpperCase()
     const email = form.querySelector('input#email').value
     const message = form.querySelector('input#message').value
-    submittion_success = false
     let current_res
 
     fetch('/contact', {
@@ -65,7 +64,6 @@ form.addEventListener('submit', async (e) => {
     .then(res => {
         //stopping animation due to succesfull contact form submittion.
         form_submittion_message.textContent = res.message
-        console.log(Object(res))
         //in order to handle it in the catch block assigning it to a global variable because res is out of scope.
         current_res = Object.assign(res)
         hideLoader(current_res.success)
