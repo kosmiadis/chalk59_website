@@ -55,9 +55,8 @@ article.paragraph {
     font-size: 1.1rem;
     color: var(--mobile-font-color);
     line-height: 1.6rem;
-    text-align: center;
+    text-align: justify;
     /*border-left: 10px solid var(--primary-font-color);*/
-    padding-left: 12px;
 }
 
 div.text {

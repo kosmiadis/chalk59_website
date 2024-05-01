@@ -1,7 +1,12 @@
 const photo_carousel = document.querySelector('.photo_carousel')
 const photos = document.querySelectorAll('div.photo')
+const down_arrow = document.querySelector('.carousel_down_arrow')
 
 let index = 0;
+
+down_arrow.addEventListener('click', e => {
+    window.scrollTo(0, 500)
+})
 
 const clearHeroCarousel = () => {
     photos.forEach(photo => {

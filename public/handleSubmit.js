@@ -3,6 +3,7 @@ const loader = document.querySelector('.loader')
 const submit_p = document.querySelector('#contact_btn').querySelector('p')
 const form_submittion_message_div = document.querySelector('.form_submittion_message')
 let form_submittion_message = document.querySelector('#submittion_message')
+const submit_btn = form.querySelector('#contact_btn')
 
 //hide the appropriate message when 4 seconds have passed.
 const hideSubmittionMessage = () => {
@@ -44,6 +45,7 @@ const hideLoader = (s) => {
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     //starting laoder animation
+    submit_btn.disabled = true
     displayLoader()
 
     //getting the values of all inputs.
@@ -66,10 +68,13 @@ form.addEventListener('submit', async (e) => {
         form_submittion_message.textContent = res.message
         //in order to handle it in the catch block assigning it to a global variable because res is out of scope.
         current_res = Object.assign(res)
+        submit_btn.disabled = false
         hideLoader(current_res.success)
     })
     .catch(e => {
         form_submittion_message.textContent = current_res.message
+        submit_btn.disabled = false
         hideLoader(current_res.success)
+        
     })
 })

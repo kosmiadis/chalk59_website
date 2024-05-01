@@ -19,10 +19,11 @@ app.use(express.static('public/forCarousel'))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
+    res.locals.page_descr = 'Αρχική'
     date = new Date()
     year = date.getFullYear()
 
-    res.render('index', {page: 'Home', year: year})
+    res.render('index', {page: 'Home', year: year, page_descr: res.locals.page_descr})
 })
 
 app.get('/contact', (req, res) => {
@@ -38,9 +39,10 @@ app.get('/services', (req, res) => {
 })
 
 app.get('/gallery', (req, res) => {
+    res.locals.page_descr = 'Gallery'
     date = new Date()
     year = date.getFullYear()
-    res.render('gallery', {page: 'Gallery', year: year})
+    res.render('gallery', {page: 'Gallery', year: year, page_descr: res.locals.page_descr})
 })
 
 app.post('/contact', async (req, res) => {

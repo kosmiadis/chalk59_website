@@ -5,7 +5,7 @@ header {
     padding-inline: 1.5rem;
     height: min-content;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
     position: sticky;
     top: 0;
 }
@@ -49,6 +49,7 @@ div.logo, div.hamburger {
 }
 
 div.links {
+    z-index: 3;
     height: 100vh;
     width: 200px;
     position: absolute;
@@ -60,6 +61,7 @@ div.links {
 }
 
 div.links > ul {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     list-style-type: none;
