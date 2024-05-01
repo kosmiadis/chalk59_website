@@ -154,7 +154,6 @@ div.contact_us > a:hover {
         border-bottom-right-radius: inherit;
     }
 
-
     div.service:nth-of-type(odd) > img {
         border-top-right-radius: unset;
         border-bottom-left-radius: inherit;
