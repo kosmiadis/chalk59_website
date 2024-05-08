@@ -49,7 +49,6 @@ app.get('/gallery', (req, res) => {
 
 app.post('/contact', async (req, res) => {
 
-
     const response = {
         owner_email_success: undefined, 
         client_email_success: undefined, 
@@ -113,6 +112,10 @@ app.post('/contact', async (req, res) => {
         response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'
         res.status(400).json({success: false, message: response.client_email_message})
     }
+})
+
+app.use((req, res) => {
+    res.render('404', {page: 'Σφάλμα 404', year: year})
 })
 
 

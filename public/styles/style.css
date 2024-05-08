@@ -5,6 +5,7 @@
 @import url('./photo_carousel.css');
 @import url('./footer.css');
 @import url('./gallery.css');
+@import url('./404.css');
 
 * a {
     text-decoration: none;
