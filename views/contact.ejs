@@ -1,6 +1,7 @@
 <%- include('./templates/navbar.ejs'); %>
 <script defer src="handleSubmit.js"></script>
 <script defer src="animateForm.js"></script>
+<script defer src="validateForm.js"></script>
 <div class="contact_container">
     <div class="form_submittion_message">
         <p id="submittion_message"></p>
@@ -10,22 +11,26 @@
         <form id="contact_form">
             <div class="field">
                 <label for="name">Όνομα</label>
-                <input id="name" type="text" autocomplete="off" required>
+                <input id="name" type="text" autocomplete="off">
+                <span class="error_form_span"></span>
             </div>
             
             <div class="field">
                 <label for="surname">Επώνυμο</label>
-                <input id="surname" type="text" autocomplete="off"  required />
+                <input id="surname" type="text" autocomplete="off"  />
+                <span class="error_form_span"></span>
             </div>
             
             <div class="field">
                 <label for="email">Email</label>
-                <input id="email" type="email" autocomplete="off" required/>
+                <input id="email" type="email" autocomplete="off"/>
+                <span class="error_form_span"></span>
             </div>
 
             <div class="field">
                 <label for="message">Μήνυμα</label>
-                <input id="message" name="message" type="text" autocomplete="off" required />
+                <input id="message" name="message" type="text" autocomplete="off" />
+                <span class="error_form_span"></span>
             </div>
             <button id="contact_btn"><p>Αποστολή</p><div class="loader"></div></button>
         </form>

@@ -69,6 +69,12 @@ div.field {
     position: relative;
 }
 
+div.field > span {
+    margin-top: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
 label {
     transition: top 0.15s ease;
     display: inline;

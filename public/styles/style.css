@@ -17,6 +17,7 @@ body, body > * {
 }
 
 body {
+    width: 100%;
     margin: 0;
     margin-inline: auto;
 }

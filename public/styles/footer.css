@@ -6,7 +6,6 @@ footer {
     position: relative;
     margin: 0;
     background-color: var(--primary-bg-color);
-    
 }
 
 footer > * ul {
@@ -31,7 +30,7 @@ footer > * ul > li > a:hover {
     color: white;
 }
 
-footer > div.content {
+footer > div.top >  div.content {
     padding: 1rem;
     width: 100%;
     max-width: 1200px;
@@ -75,7 +74,13 @@ div.footer_attribution > p >  a:hover {
     text-decoration-line: underline;
 }
 
+div.top {
+    margin-bottom: 5rem;
+}
 
+div.bottom {
+    margin-bottom: 2rem;
+}
 
 
 @media screen and (min-width: 569px) {
