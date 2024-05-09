@@ -21,37 +21,58 @@ div.home {
 
 #hero_logo {
     width: 100%;
-    max-width: 340px;
+    max-width: 350px;
 }
         
 div.welcome {
+    margin-top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0;
-    
+    position: relative;
+}
+
+div.welcome > * {
+    z-index: 3;
 }
 
 p.hero_welcome {
-    padding: 8px;
     color: var(--primary-bg-color);
     justify-self: center;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: 1.35em;
     font-weight: 600;
     text-wrap: nowrap;
     text-align: center;
-    gap: 5px;
     display: flex;
     flex-direction: column;
 }
 
 span#brand {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--primary-font-color);
     font-weight: 900;
 }
+
+div.graphic_line {
+    width: 100%;
+    max-width: 650px;
+    height: 30px;
+    background-color: var(--primary-font-color);
+    z-index: 1;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+div.graphic_line:nth-of-type(1) {
+    top: 55%;
+
+}
+
 
 div.hero {
     width: 100%;
@@ -93,6 +114,7 @@ div.article_wrapper {
     margin-top: 200px;
 }
 
+
 #services_heading {
     text-align: center;
     font-size: 1.5rem;
@@ -102,7 +124,7 @@ div.article_wrapper {
     color: var(--mobile-font-color);
 }
 
-#services_btn {
+#services_btn, a.button_primary {
     outline: unset;
     border: unset;
     font-size: 1.3rem;
@@ -114,7 +136,7 @@ div.article_wrapper {
     text-wrap: nowrap;
 }
 
-#services_btn:hover {
+#services_btn:hover, a.button_primary:hover {
     cursor: pointer;
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
@@ -132,18 +154,17 @@ div.article_wrapper {
         order: 1;
         text-align: right;
     }
-
+    
     div.welcome {
         flex-direction: row;
         justify-content: center;
     }
-
-    p.hero_welcome {
-        font-size: 1.4rem;
+    h2.hero_welcome {
+        font-size: 2.5rem;
     }
 
     span#brand {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
 
     div.text {
@@ -159,5 +180,10 @@ div.article_wrapper {
         text-align: left;
         font-size: 1.2rem;
 
+    }
+
+    
+    a.button_primary {
+        flex-wrap: wrap;
     }
 }
