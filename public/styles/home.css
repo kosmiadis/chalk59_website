@@ -86,6 +86,7 @@ article.paragraph {
     line-height: 1.8rem;
 }
 
+
 article.paragraph > h2 {
     color: var(--primary-font-color);
 }

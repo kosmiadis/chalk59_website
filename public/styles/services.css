@@ -1,17 +1,13 @@
 @import url('variables.css');
 
-div.service {
-    box-sizing: border-box;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-    max-width: 370px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.336);
-    border-radius: 20px;
-    border-top: 25px solid var(--primary-bg-color);
-    border-bottom: 25px solid var(--primary-font-color)
+
+div.services_container {
+    --s: 100px; /* control the size */    
+    --_g: #0000 90deg,#366 0;
+    background: 
+      conic-gradient(from 90deg at 2px 2px,var(--_g)),
+      conic-gradient(from 90deg at 1px 1px,var(--_g));
+    background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
 }
 
 div.text {
@@ -33,7 +29,6 @@ div.text > p {
     line-height: 1.5rem;
     font-size: 1.1rem;
     text-align: center;
-    font-family: var(--secondary-font);
 }
 
 #seminars_img {
@@ -49,14 +44,31 @@ div.services_preview {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
 }
 
 div.services {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column  ;
     align-items: center;
     gap: 2rem;
+    
+}
+
+div.service {
+    margin: auto;
+    width: 100%;
+    min-width: 250px;
+}
+
+div.service:nth-of-type(odd) {
+    background-color: var(--primary-font-color);
+    color: white;
+}
+
+div.service > div.text > p {
+    font-family: var(--primary-font);
 }
 
 #services_heading {
@@ -81,9 +93,6 @@ h2.service_inner_heading {
 div.service_hero {
     background-size: 100% 150px;
 }
-
-
-
 div.contact_us {
     align-self: center;
     display: flex;
@@ -122,6 +131,7 @@ div.contact_us > a:hover {
 @media screen and (min-width: 769px) {
     
     div.services {
+        margin: auto;
         gap: 4rem;
     }
 
@@ -131,46 +141,10 @@ div.contact_us > a:hover {
         width: 90%;
         max-width: 750px;
         gap: unset;
-        
     }
-
-    div.service:nth-of-type(odd) {
-        border-right: 25px solid var(--primary-bg-color);
-        margin-right: 5%;
-        border-top: unset;
-        border-bottom: unset;
-    }
-
-    div.service:nth-of-type(even) {
-        border-left: 25px solid var(--primary-font-color);
-        margin-left: 5%;
-        border-top: unset;
-        border-bottom: unset;
-    }
-
-    div.service:nth-of-type(even) > img {
-        order: 2;
-        border-top-left-radius: unset;
-        border-bottom-right-radius: inherit;
-    }
-
-    div.service:nth-of-type(odd) > img {
-        border-top-right-radius: unset;
-        border-bottom-left-radius: inherit;
-    }
-
-    div.service:nth-of-type(odd) > div.text {
-        border-bottom: 25px solid var(--primary-font-color);
-    }
-
-    div.service:nth-of-type(even) > div.text {
-        border-bottom: 25px solid var(--primary-bg-color);
-    }
-
 
     div.text {
-        justify-content: center;
-        
+        justify-content: center;   
     }
 
     div.text > h2 {
