@@ -11,6 +11,10 @@
     text-decoration: none;
 }
 
+* a::selection {
+    background-color: transparent;
+}
+
 body, body > * {
     box-sizing: border-box;
 
