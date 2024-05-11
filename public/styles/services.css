@@ -82,6 +82,10 @@ div.service {
     transition: 0.1s ease-in;
 }
 
+div.service > img::selection {
+    background-color: transparent;
+}
+
 div.service > img:hover {
     cursor: pointer;
 }
@@ -180,5 +184,9 @@ div.contact_us > p {
 
     div.text > p {
         font-size: 1.26rem;
+    }
+
+    #services_heading {
+        text-align: center;
     }
 }

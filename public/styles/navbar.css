@@ -123,6 +123,7 @@ div.links > ul > li {
 div.links > ul > li >  a {
     color: var(--primary-font-color);
     font-size: 1.3rem;
+    font-weight: 400;
 }
 
 #hamburger:hover {
