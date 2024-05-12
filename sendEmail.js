@@ -22,11 +22,11 @@ module.exports.sendEmailResponse = async (name, email) => {
         from: process.env.host_email,
         to: email,
         subject: 'Chalk59 Επικοινωνία ',
-        text: `Καλησπέρα σας ${name}, 
+        text: `Καλησπέρα σας κύριε/κυρία ${name}, 
         \n Λάβαμε το Email σας και είμαστε πρόθυμοι να σας εξυπηρετήσουμε!
         \n Θα σας ενημερώσουμε με νεότερα σύντομα!
-        Με εκτίμηση Chalk59 
-        \n`
+        \nΜε εκτίμηση Chalk59 
+        `
       };
       
       transporter.sendMail(mailOptions, function(error,info){
