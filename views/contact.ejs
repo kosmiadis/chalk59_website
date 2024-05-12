@@ -11,25 +11,25 @@
         <form id="contact_form">
             <div class="field">
                 <label for="name">Όνομα</label>
-                <input id="name" type="text" autocomplete="off">
+                <input id="name" type="text" autocomplete="off" required />
                 <span class="error_form_span"></span>
             </div>
             
             <div class="field">
                 <label for="surname">Επώνυμο</label>
-                <input id="surname" type="text" autocomplete="off"  />
+                <input id="surname" type="text" autocomplete="off" required/>
                 <span class="error_form_span"></span>
             </div>
             
             <div class="field">
                 <label for="email">Email</label>
-                <input id="email" type="email" autocomplete="off"/>
+                <input id="email" type="email" autocomplete="off" required/>
                 <span class="error_form_span"></span>
             </div>
 
             <div class="field">
                 <label for="message">Μήνυμα</label>
-                <input id="message" name="message" type="text" autocomplete="off" />
+                <input id="message" name="message" type="text" autocomplete="off" required/>
                 <span class="error_form_span"></span>
             </div>
             <button id="contact_btn"><p>Αποστολή</p><div class="loader"></div></button>

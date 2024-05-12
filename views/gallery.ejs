@@ -1,19 +1,32 @@
 <%- include('./templates/navbar.ejs') %>
+<script defer src="gallery.js"></script>
 <div class="gallery">
     <h2>Gallery</h2>
+    <div class="filters">
+        <button id="all" class="filter 0">Όλα</button>
+        <button id="general" class="filter 1">Γενικά</button>
+        <button id="candles" class="filter 2">Κεριά</button>
+        <button id="decorations" class="filter 3">Διακόσμηση</button>
+    </div>
     <div class="gallery_content">
-        <img class="gallery_img" src="img_1.jpg" alt="image 1"/>
-        <img class="gallery_img" src="img_2.jpg" alt="image 2"/>
-        <img class="gallery_img" src="img_3.jpg" alt="image 3"/>
-        <img class="gallery_img" src="img_4.jpg" alt="image 4"/>
-        <img class="gallery_img" src="img_5.jpg" alt="image 5"/>
-        <img class="gallery_img" src="img_6.jpg" alt="image 6"/>
-        <img class="gallery_img" src="img_7.jpg" alt="image 7"/>
-        <img class="gallery_img" src="img_8.jpg" alt="image 8"/>
-        <img class="gallery_img" src="img_9.jpg" alt="image 9"/>
-        <img class="gallery_img" src="wedding.png" alt="image 10"/>
-        <img class="gallery_img" src="img_10.jpg" alt="image 10"/>
-        <img class="gallery_img" src="img_11.jpg" alt="image 10"/>
+        <img class="gallery_img general_category all_category" src="img_1.jpg" alt="image 1"/>
+        <img class="gallery_img decorations_category all_category" src="img_2.jpg" alt="image 2"/>
+        <img class="gallery_img general_category all_category" src="img_3.jpg" alt="image 3"/>
+        <img class="gallery_img general_category all_category" src="img_4.jpg" alt="image 4"/>
+        <img class="gallery_img candles_category all_category" src="img_5.jpg" alt="image 5"/>
+        <img class="gallery_img candles_category all_category" src="img_6.jpg" alt="image 6"/>
+        <img class="gallery_img candles_category all_category" src="img_7.jpg" alt="image 7"/>
+        <img class="gallery_img candles_category all_category" src="img_8.jpg" alt="image 8"/>
+        <img class="gallery_img candles_category all_category" src="img_9.jpg" alt="image 9"/>
+        <img class="gallery_img decorations_category all_category" src="wedding.png" alt="image wedding"/>
+        <img class="gallery_img decorations_category all_category" src="img_10.jpg" alt="image 10"/>
+        <img class="gallery_img general_category all_category" src="img_11.jpg" alt="image 11"/>
+        <img class="gallery_img decorations_category all_category" src="img_12.jpg" alt="image 12"/>
+        <img class="gallery_img decorations_category all_category" src="img_13.jpg" alt="image 13"/>
+        <img class="gallery_img decorations_category all_category" src="img_14.jpg" alt="image 14"/>
+        <img class="gallery_img decorations_category all_category" src="img_15.jpg" alt="image 15"/>
+        <img class="gallery_img general_category all_category" src="img_16.jpg" alt="image 16"/>
+        <img class="gallery_img general_category all_category" src="furniture.png" alt="image furniture" />
     </div>
 </div>
 <%- include('./templates/footer.ejs'); %>
