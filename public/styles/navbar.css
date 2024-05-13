@@ -53,12 +53,14 @@ div.links {
     z-index: 3;
     height: 100vh;
     width: 200px;
+    display: flex;
     position: absolute;
-    right: 0;
+    right: -200px;
     top: 0;
     background-color:var(--menu-bg-color);
     padding: 2rem;
     flex-direction: column;
+    transition: 0.2s ease-in;
 }
 
 div.links > ul {
@@ -70,8 +72,6 @@ div.links > ul {
     padding: 0;
     gap: 1rem;
 }
-
-
 
 /*for responsive transition from mobile to pc*/
 @media screen and (min-width: 769px) {
