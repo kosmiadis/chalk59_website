@@ -44,11 +44,16 @@ footer > div.top >  div.content {
 }
 
 div.copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
+    text-align: center;
 }
+
+#brand_copyright {
+    color: var(--primary-font-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 
 div.info {
     display: flex;

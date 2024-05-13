@@ -5,6 +5,7 @@ header {
     padding-inline: 1.5rem;
     height: min-content;
     background-color: white;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0.5);
     z-index: 10;
     position: sticky;
     top: 0;
@@ -55,7 +56,7 @@ div.links {
     position: absolute;
     right: 0;
     top: 0;
-    background-color:var(--primary-bg-color);
+    background-color:var(--menu-bg-color);
     padding: 2rem;
     flex-direction: column;
 }

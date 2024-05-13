@@ -25,6 +25,7 @@ div.gallery_content {
 }
 
 img.gallery_img {
+    box-shadow: 5px 5px 5px rgb(149, 149, 149);
     border-radius: 3px;
     width: 100%;
     max-width: 350px;
@@ -33,22 +34,25 @@ img.gallery_img {
 
 .filters {
     background-color: white;
-    border-top: 5px dashed var(--primary-bg-color);
-    width: 100%;
+    width: 90%;
     padding: 16px;
     position: sticky;
     top: 102px;
     text-align: center; /* Align buttons to the center */
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    column-gap: 8px;
+    justify-content: center;
 }
 
 .filters button {
+    max-width: 250px;
     background-color: #fff;
     border: 2px solid #333;
     color: #333;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 12px;
     border-radius: 6px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 

@@ -24,4 +24,6 @@ body {
     width: 100%;
     margin: 0;
     margin-inline: auto;
+    display: grid;
+    grid-template-rows: min-content 1fr auto;
 }
