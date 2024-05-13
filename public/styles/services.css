@@ -108,8 +108,6 @@ div.service > div.text > p {
     color: white;
     /*background-image: linear-gradient(to right, #e96443, #904e95)*/
     background-image: linear-gradient(to right, #FF5F6D, #FFC371);
-    position: sticky;
-    top: 100px;
 }
 
 h2.services_heading {
