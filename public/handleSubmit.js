@@ -34,12 +34,14 @@ const displayLoader = () => {
 }
 
 //hide the loading animation when the form submittion was succesful or when an error occured.
-const hideLoader = (s) => {
+const hideLoader = (success) => {
     submit_p.style.display = 'block'
     loader.style.display = 'none'
     //display the corresponding message.
-    displaySubmittionMessage(s)
-    form.reset();
+    displaySubmittionMessage(success)
+    if (success) {
+        form.reset();
+    }
 }
 
 form.addEventListener('submit', async (e) => {
@@ -75,6 +77,5 @@ form.addEventListener('submit', async (e) => {
         form_submittion_message.textContent = current_res.message
         submit_btn.disabled = false
         hideLoader(current_res.success)
-        
     })
 })
