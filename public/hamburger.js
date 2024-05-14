@@ -10,14 +10,23 @@ window.addEventListener('load', e => {
 
 window.addEventListener('resize', e => {
     menu.style.right = '-200px'
+    setTimeout(() => {
+        menu.style.display = 'none'
+    }, 200)
+    
 })
 
 hamburger.addEventListener('click', e => {
-    if (menu.style.right !== '0px') {
+    menu.style.display = 'flex'
+
+    setTimeout(() => {
         menu.style.right = '0px'
-    }
+    }, 100)
 })
 
 close.addEventListener('click', e => {
     menu.style.right = '-200px'
+    setTimeout(() => {
+        menu.style.display = 'none'
+    }, 200)
 })

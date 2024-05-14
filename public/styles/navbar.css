@@ -53,7 +53,7 @@ div.links {
     z-index: 3;
     height: 100vh;
     width: 200px;
-    display: flex;
+    display: none;
     position: absolute;
     right: -200px;
     top: 0;
