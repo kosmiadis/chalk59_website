@@ -12,6 +12,5 @@ dropdownButtons.forEach(btn => {
             e.target.style.transform = 'rotate(0deg)'
             e.target.classList.add('open')
         }
-        
     })
 })

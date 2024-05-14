@@ -1,4 +1,5 @@
 const { sendEmailResponse, newMessageEmail } = require('./sendEmail')
+const { validateForm } = require('./validateForm')
 
 const express = require('express')
 const cors = require('cors')
@@ -56,61 +57,78 @@ app.post('/contact', async (req, res) => {
     }
 
     const { name, surname, email, message } = req.body
+    //variable to see if form validation was true or false
+    let validated = false
+
+    //verify that the inputs are not blank.
 
     try {
-        const email_exists = await emailCheck(email)
-        if (!email_exists) {
-            response.owner_email_success = false
-            response.client_email_success = false
-            response.client_email_message = 'Το Email δεν υπάρχει. Προσπαθήστε ξανά.'
-            res.status(400).json({success: false, message: response.client_email_message})
-        }
-        else {
-            //send email to customer
-            try {
-                const client_res = await sendEmailResponse(name, email)    
-                console.log(client_res)
-                if (client_res.message === 'client email sent') {
-                    response.client_email_success = true
-                    response.client_email_message = 'Το μήνυμα στάλθηκε επιτυχώς!'
-                }
-            } catch (error) {
-                if (error.message !== 'client email not sent') {
-                    console.log(error)
-                }
-                response.client_email_success = false
-                response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'
-            }
-            
-            //send email to owner
-            try {
-                const owner_res = await newMessageEmail(name, surname, email, message)
-                console.log(owner_res)
-                if (owner_res.message === 'email recieved') {
-                    response.owner_email_success = true
-                }
-            } catch (error) {
-                if (error.message !== 'email not recieved') {
-                    console.log(error)
-                }
+        const validation = await validateForm(name, surname, email, message)
+        validated = validation.passed
+    }
+    catch (error) {
+        validated = false
+        response.client_email_message = 'Ένα ή περισσότερα πεδία είναι κενά!'
+        res.status(400).json({success: false, message: response.client_email_message})
+    }
+
+    //check if validation has passed and its correct.
+    if (validated) {
+        try {
+            const email_exists = await emailCheck(email)
+            if (!email_exists) {
                 response.owner_email_success = false
-            }
-            
-            //check if both operations have finished
-            if (response.owner_email_success === true && response.client_email_success === true) {
-                res.status(200).json({success: true, message: response.client_email_message})
+                response.client_email_success = false
+                response.client_email_message = 'Το Email δεν υπάρχει. Προσπαθήστε ξανά.'
+                res.status(400).json({success: false, message: response.client_email_message})
             }
             else {
-                res.status(500).json({success: false, message: response.client_email_message})
+                //send email to customer
+                try {
+                    const client_res = await sendEmailResponse(name, email)    
+                    console.log(client_res)
+                    if (client_res.message === 'client email sent') {
+                        response.client_email_success = true
+                        response.client_email_message = 'Το μήνυμα στάλθηκε επιτυχώς!'
+                    }
+                } catch (error) {
+                    if (error.message !== 'client email not sent') {
+                        console.log(error)
+                    }
+                    response.client_email_success = false
+                    response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'
+                }
+                
+                //send email to owner
+                try {
+                    const owner_res = await newMessageEmail(name, surname, email, message)
+                    console.log(owner_res)
+                    if (owner_res.message === 'email recieved') {
+                        response.owner_email_success = true
+                    }
+                } catch (error) {
+                    if (error.message !== 'email not recieved') {
+                        console.log(error)
+                    }
+                    response.owner_email_success = false
+                }
+                
+                //check if both operations have finished
+                if (response.owner_email_success === true && response.client_email_success === true) {
+                    res.status(200).json({success: true, message: response.client_email_message})
+                }
+                else {
+                    res.status(500).json({success: false, message: response.client_email_message})
+                }
             }
         }
-    }
-    catch (e) {
-        console.log(e)
-        response.client_email_success = false
-        response.owner_email_success = false
-        response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'
-        res.status(400).json({success: false, message: response.client_email_message})
+        catch (e) {
+            console.log(e)
+            response.client_email_success = false
+            response.owner_email_success = false
+            response.client_email_message = 'Ωχ! Κάτι πήγε στραβά δοκίμασε πάλι αργότερα.'
+            res.status(400).json({success: false, message: response.client_email_message})
+        }
     }
 })
 

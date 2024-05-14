@@ -9,11 +9,16 @@ window.addEventListener('load', e => {
 })
 
 window.addEventListener('resize', e => {
-    menu.style.right = '-200px'
-    setTimeout(() => {
-        menu.style.display = 'none'
-    }, 200)
-    
+    if (window.innerWidth > 769) {
+        menu.style.display = 'flex'
+        menu.style.right = '0'
+    }
+    else {
+        menu.style.right = '-200px'
+        setTimeout(() => {
+            menu.style.display = 'none'
+        }, 200) 
+    }
 })
 
 hamburger.addEventListener('click', e => {
