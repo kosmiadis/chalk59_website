@@ -124,7 +124,7 @@ span#brand {
 .wave svg {
     position: relative;
     display: block;
-    width: calc(135% + 1.3px);
+    width: calc(100% + 1.3px);
     height: 86px;
 }
 
