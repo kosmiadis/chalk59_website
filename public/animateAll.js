@@ -23,3 +23,14 @@ window.addEventListener('scroll', e => {
         }
     })
 })
+
+window.addEventListener('load', e => {
+    console.log('hh')
+    const fadeInElements = document.querySelectorAll('.fadeIn')
+    fadeInElements.forEach(el => {
+        if (isVisible(el)) {
+            console.log('es')
+            fadeIn(el)
+        }
+    })
+})
