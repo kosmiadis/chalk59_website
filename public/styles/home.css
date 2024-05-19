@@ -25,19 +25,74 @@ div.home {
 }
         
 div.welcome {
-    height: 80vh;
+    height: 90vh;
     box-sizing: border-box;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 0;
     position: relative;
 } 
 
 div.welcome > * {
     z-index: 3;
+}
+
+div.inner_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.inner_wrapper > div.text {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+div.inner_wrapper > div.text > img {
+    margin: auto;
+    margin: 0;
+} 
+
+
+div.inner_wrapper > div.text > h2 {
+    margin: auto;
+    text-align: center;
+    margin: 0;
+}
+
+div.welcome > div.inner_wrapper >  button.hero_btn {
+    outline: none;
+    border: none;
+    width: 250px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin: auto;
+
+}
+
+
+div.welcome > div.inner_wrapper >  button.hero_btn {
+    outline: unset;
+    border: unset;
+    font-size: 1.2rem;
+    background-color: var(--primary-font-color);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-wrap: nowrap;
+    color: white;
+    margin: auto;
+}
+
+div.welcome > div.inner_wrapper >  button.hero_btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
 }
 
 p.hero_welcome {
@@ -71,7 +126,7 @@ span#brand {
     position: relative;
     display: block;
     width: calc(135% + 1.3px);
-    height: 56px;
+    height: 86px;
 }
 
 .wave {
@@ -82,10 +137,6 @@ span#brand {
     top: 0;
 }
 
-.bottom_wave {
-    bottom: 0;
-    transform: rotate(180deg);
-}
 div.hero {
     width: 100%;
 }
@@ -98,7 +149,6 @@ article.paragraph {
     max-width: 650px;
     line-height: 1.8rem;
 }
-
 
 article.paragraph > h2 {
     color: var(--primary-font-color);
@@ -153,11 +203,33 @@ div.article_wrapper:last-child {
 }
 
 div.text {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 100px;
 }
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.triangle svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1.3px);
+    height: 118px;
+}
+
+.triangle .shape-fill {
+    fill: #E8681F;
+}
+
 
 div.services {
     padding: 2rem;
@@ -249,5 +321,8 @@ article.services > p {
     }
     a.button_primary {
         flex-wrap: wrap;
+    }
+    div.inner_wrapper > div.text > h2 {
+        text-align: left;
     }
 }
