@@ -19,8 +19,7 @@ div.home {
 }
 
 #hero_logo {
-    width: 100%;
-    max-width: 350px;
+    width: 280px;
 }
         
 div.welcome {
@@ -200,6 +199,10 @@ div.article_wrapper:last-child {
    margin-bottom: 100px; 
 }
 
+div.article_wrapper > img {
+    width: 82px;
+}
+
 div.text {
     position: relative;
     display: flex;
@@ -277,6 +280,10 @@ article.services > p {
 }
 
 @media screen and (min-width: 769px) {
+
+    #hero_logo {
+        width: 350px;
+    }
 
     div.article_wrapper {
         margin: auto;

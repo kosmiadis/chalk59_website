@@ -2,17 +2,12 @@
 @import url('./home.css');
 @import url('./contact.css');
 @import url('./services.css');
-@import url('./photo_carousel.css');
 @import url('./footer.css');
 @import url('./gallery.css');
 @import url('./404.css');
 
 
 /*for animations */
-
-.pop_up {
-    opacity: 0;
-}
 
 .fadeIn {
     opacity: 0;
@@ -31,8 +26,6 @@
 
 body, body > * {
     box-sizing: border-box;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
 }
 
 body {

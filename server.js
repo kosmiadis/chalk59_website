@@ -16,8 +16,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static('public'))
 app.use(express.static('public/styles'))
-app.use(express.static('public/scripts'))
-app.use(express.static('public/forCarousel'))
+app.use(express.static('public/images'))
 
 app.set('view engine', 'ejs')
 
