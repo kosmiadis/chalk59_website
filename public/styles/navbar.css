@@ -11,6 +11,12 @@ header {
     top: 0;
 }
 
+#close {
+    fill: white;
+    margin: 0;
+    margin-left: -12px;
+}
+
 header > * {
     font-family: var(--primary_font);
 }

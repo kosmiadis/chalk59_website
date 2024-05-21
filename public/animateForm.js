@@ -1,5 +1,5 @@
-const inputs = form.querySelectorAll('input')
-const labels = form.querySelectorAll('label')
+const inputs = document.querySelectorAll('input')
+const labels = document.querySelectorAll('label')
 
 //label changes position when the input if focused.
 inputs.forEach(input => input.addEventListener('focus', e => {
