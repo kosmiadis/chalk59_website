@@ -9,6 +9,7 @@ header {
     z-index: 10;
     position: sticky;
     top: 0;
+    transition: unset;
 }
 
 #close {
@@ -28,6 +29,7 @@ div.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: unset;
 }
 
 div.logo, div.hamburger {

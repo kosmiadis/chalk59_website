@@ -24,10 +24,14 @@ div.home {
         
 div.welcome {
     height: 90vh;
+    display: flex;
     box-sizing: border-box;
     margin-top: 0;
     gap: 0;
     position: relative;
+    background-image: url('../images/hero_background.jpg');
+    background-size: cover;
+    background-position: center;
 } 
 
 div.welcome > * {
@@ -35,30 +39,24 @@ div.welcome > * {
 }
 
 div.inner_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    height: min-content;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-div.inner_wrapper > div.text {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
-    align-self: center;
+    gap: 2rem;
 }
 
-div.inner_wrapper > div.text > img {
-    margin: auto;
-    margin: 0;
-} 
 
 
-div.inner_wrapper > div.text > h2 {
-    margin: auto;
+div.inner_wrapper > h2 {
+    line-height: 5rem;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.284);
     text-align: center;
     margin: 0;
 }
@@ -83,7 +81,6 @@ div.welcome > div.inner_wrapper >  button.hero_btn {
     border-radius: 2px;
     text-wrap: nowrap;
     color: white;
-    margin: auto;
 }
 
 div.welcome > div.inner_wrapper >  button.hero_btn:hover {
@@ -92,14 +89,13 @@ div.welcome > div.inner_wrapper >  button.hero_btn:hover {
     color: var(--primary-font-color);
 }
 
-p.hero_welcome {
+.hero_text {
     color: var(--primary-bg-color);
     justify-self: center;
     border-radius: 8px;
-    font-size: 1.35em;
-    font-weight: 600;
-    text-wrap: nowrap;
-    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: left;
     display: flex;
     flex-direction: column;
 }
@@ -112,6 +108,7 @@ span#brand {
 }
 
 .wave {
+    transition: unset;
     position: absolute;
     left: 0;
     width: 100%;
@@ -281,10 +278,6 @@ article.services > p {
 
 @media screen and (min-width: 769px) {
 
-    #hero_logo {
-        width: 350px;
-    }
-
     div.article_wrapper {
         margin: auto;
         flex-direction: row;
@@ -301,12 +294,9 @@ article.services > p {
         flex-direction: row;
         justify-content: center;
     }
-    h2.hero_welcome {
-        font-size: 2.5rem;
-    }
 
-    span#brand {
-        font-size: 3rem;
+    div.inner_wrapper > h2 {
+        font-size: 6rem;
     }
 
     div.text {

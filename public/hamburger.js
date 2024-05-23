@@ -1,6 +1,9 @@
 const hamburger = document.querySelector('#hamburger')
 const close = document.querySelector('#close')
 const menu = document.querySelector('.links')
+const header = document.querySelector('header')
+
+
 
 window.addEventListener('resize', e => {
     if (window.innerWidth > 769) {
