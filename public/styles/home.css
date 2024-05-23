@@ -39,6 +39,8 @@ div.welcome > * {
 }
 
 div.inner_wrapper {
+    backdrop-filter: blur(2px);
+    padding: 2rem 1rem;
     width: 100%;
     box-sizing: border-box;
     height: min-content;
@@ -49,8 +51,6 @@ div.inner_wrapper {
     justify-content: center;
     gap: 2rem;
 }
-
-
 
 div.inner_wrapper > h2 {
     line-height: 5rem;
@@ -149,6 +149,7 @@ article.paragraph > h2 {
 }
 
 div.text_wrapper {
+    padding-top: 3rem;
     width: 100%;
     margin-inline: auto;
     --s: 300px; /* control the size */    
@@ -208,37 +209,24 @@ div.text {
     margin-bottom: 100px;
 }
 
-.triangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.triangle svg {
-    position: relative;
-    display: block;
-    width: calc(200% + 1.3px);
-    height: 118px;
-}
-
-.triangle .shape-fill {
-    fill: #E8681F;
-}
-
-
-div.services {
+div.hero_services {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    background-image: url('../images/services_background_2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 article.services {
+    backdrop-filter: blur(5px);
+    margin: auto;
     padding-block: 2rem;
-    margin-bottom: 5rem;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 1rem;
     max-width: 550px;
     font-size: 1.2rem;
     line-height: 1.7rem;
@@ -248,14 +236,18 @@ article.services {
 }
 
 article.services > h2 {
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 2rem;
     color: var(--primary-font-color);
+    line-height: 2.3rem;
     text-align: center;
 }
 
 article.services > p {
     text-align: center;
 }
+
+
 
 
 #services_btn, a.button_primary {
@@ -296,7 +288,7 @@ article.services > p {
     }
 
     div.inner_wrapper > h2 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     div.text {
@@ -312,8 +304,11 @@ article.services > p {
     article.paragraph {
         text-align: left;
         font-size: 1.2rem;
-
     }
+
+    article.services {
+        padding: 3rem;
+    };
     a.button_primary {
         flex-wrap: wrap;
     }

@@ -1,0 +1,18 @@
+@import url('variables.css');
+
+div.hero_services {
+    position: relative;
+}
+
+div.hero_services > * {
+    z-index: 3;
+}
+
+div.circle {
+    z-index: 1;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: var(--primary-font-color);
+}
