@@ -3,12 +3,12 @@
 
 :root {
     --font-color: #ee722b;
-    --primary-font-color: #ff5e00;
+    --primary-font-color: #e85805;
     --desktop-font-color: #c8ccda;
     --mobile-font-color: black;
     --primary-font: "Lato", sans-serif;
     --secondary-font: "Sedan", serif;
     --primary-bg-color: #132839;
-    --menu-bg-color: #183349;
+    --menu-bg-color: rgb(24, 51, 73, 0.99);
     --font-color-hover: hsla(22, 81%, 52%, 0.8);
 }

@@ -129,27 +129,49 @@ div.service_hero {
 }
 
 div.contact_us {
-    margin-block: 60px;
+    height: 100vh;
+    width: 100%;
     align-self: center;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    display: flex;
+    background-image: url('../images/contact_background.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
-div.contact_us > a:hover {
+#contact_img {
+    display: none;
+}
+
+div.contact_us > div.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 2rem;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px rgb(0,0,0, 0.5);
+    max-width: 450px;
+}
+
+div.contact_us > div.inner > a:hover {
     color: var(--primary-font-color);
 }
 
-div.contact_us > h2 {
+div.contact_us > div.inner > h2 {
     color: var(--primary-font-color);
     margin: 0;
     font-size: 1.6rem;
 }
 
-div.contact_us > p {
-    font-size: 1.2rem;
-    text-align: center; 
+div.contact_us > div.inner > p {
+    font-size: 1.1rem;
+    text-align: center;
     max-width: 450px;
     margin-bottom: 3rem;
     line-height: 1.8rem;

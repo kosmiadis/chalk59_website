@@ -4,7 +4,8 @@ header {
     padding-block: 1rem;
     padding-inline: 2rem;
     height: min-content;
-    background-color: white;
+    background-color: rgb(255,255,255, 0.9);
+    backdrop-filter: blur(3px);
     box-shadow: 0px 5px 10px rgb(0,0,0,0.3);
     z-index: 10;
     position: sticky;
@@ -73,6 +74,7 @@ div.links {
     right: -200px;
     top: 0;
     background-color:var(--menu-bg-color);
+    backdrop-filter: blur(5px);
     padding: 2rem;
     flex-direction: column;
     transition: 0.2s ease-in;
@@ -101,6 +103,7 @@ div.links > ul {
         width: min-content;
         text-wrap: nowrap;
         background-color: unset;
+        backdrop-filter: unset;
     }
 
     div.links > ul {
