@@ -5,6 +5,7 @@ div.services_wrapper {
     height: min-content;
     background-image: url('../images/services_background.jpg');
     background-size: cover;
+    background-attachment: fixed;
 }
 
 div.border {
@@ -24,8 +25,6 @@ div.text {
     flex-direction: column;
     justify-content: flex-start;
 }
-
-
 
 div.text > p {
     margin: 0;
