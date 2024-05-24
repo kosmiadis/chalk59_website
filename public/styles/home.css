@@ -34,6 +34,8 @@ div.welcome {
     background-position: center;
 } 
 
+
+
 div.welcome > * {
     z-index: 3;
 }
@@ -53,10 +55,11 @@ div.inner_wrapper {
 }
 
 div.inner_wrapper > h2 {
+    transform: translateY(-2rem);
     line-height: 5rem;
     font-size: 4rem;
     color: white;
-    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.284);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.184);
     text-align: center;
     margin: 0;
 }
@@ -193,7 +196,7 @@ div.article_wrapper {
     max-width: 800px;
     padding: 2rem 1rem;
     margin-block: 50px;
-    border-radius: 8px;
+    border-radius: 12px;
     position: relative; /* Ensure the pseudo-element is positioned relative to this */
     overflow: hidden; /* Prevents the pseudo-element from overflowing the rounded corners */
 }
@@ -233,8 +236,8 @@ article.services {
     width: 90%;
     background-color: rgb(255,255,255, 0.8);
     padding: 3rem 1.5rem;
-    border-radius: 2px;
-    box-shadow: 5px 5px 5px rgb(0,0,0, 0.5);
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgb(0,0,0, 0.2);
     max-width: 400px;
 }
 

@@ -8,23 +8,28 @@ const submit_btn = form.querySelector('#contact_btn')
 //hide the appropriate message when 4 seconds have passed.
 const hideSubmittionMessage = () => {
     setTimeout(() => {
-        form_submittion_message_div.style.display = 'none'
+        form_submittion_message_div.style.opacity = '0'
     }, 5000)
+
 }
 
 //display the appropriate message when the form is submitted.
 const displaySubmittionMessage = (s) => {
-    if (s === true) {
-        form_submittion_message_div.style.backgroundColor = 'rgb(73, 216, 73)'
-        form_submittion_message_div.style.borderLeftColor = 'rgb(1, 148, 1)'
-    }
-    else {
-        form_submittion_message_div.style.backgroundColor = 'rgb(242, 69, 69)'
-        form_submittion_message_div.style.borderLeftColor = 'rgb(248, 23, 23)'
-   }
-    
     form_submittion_message_div.style.display = 'flex'
-    hideSubmittionMessage()
+    setTimeout(() => {
+        if (s === true) {
+            form_submittion_message_div.style.backgroundColor = 'rgb(73, 216, 73)'
+            form_submittion_message_div.style.borderLeftColor = 'rgb(1, 148, 1)'
+        }
+        else {
+            form_submittion_message_div.style.backgroundColor = 'rgb(242, 69, 69)'
+            form_submittion_message_div.style.borderLeftColor = 'rgb(248, 23, 23)'
+       }
+        
+        form_submittion_message_div.style.opacity = '1'
+        hideSubmittionMessage()
+    }, 100)
+    
 }
 
 //display the loading animation when the form is submitted.
@@ -74,6 +79,7 @@ form.addEventListener('submit', async (e) => {
         hideLoader(current_res.success)
     })
     .catch(e => {
+        swal(form_submittion_message)
         form_submittion_message.textContent = current_res.message
         submit_btn.disabled = false
         hideLoader(current_res.success)

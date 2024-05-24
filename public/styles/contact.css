@@ -4,9 +4,12 @@
 }
       
 div.contact_container {
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right, #ff4b1f, #ff9068);
+    background-image: url('../images/contact_background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 div.loader {
@@ -20,12 +23,18 @@ div.loader {
 }
 
 div.form_submittion_message {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    z-index: 4;
+    opacity: 0;
     display: none;
     flex-direction: row;
     align-items: center;
     margin: auto;
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     border-radius: 20px;
     border-left-width: 25px;
     border-left-style: solid;
@@ -34,6 +43,7 @@ div.form_submittion_message {
     width: 100%;
     max-width: 280px;
     margin-bottom: 1rem;
+    transition: 0.2s ease-in;
 }
 
 div.contact_container {
@@ -41,19 +51,20 @@ div.contact_container {
     flex-direction: column;
     width: 100%;
     margin: auto;
-    padding: 2rem;
 }
 
 
 div.form {
     width: 100%;
     max-width: 450px;
-    margin: auto;
+    margin-inline: auto;
+    margin-top: 3rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);;
     padding: 2rem;
+    transition: 0.2s ease-in;
 }
 
 div.form > h2 {
@@ -62,7 +73,6 @@ div.form > h2 {
 }
 
 #contact_form {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -140,4 +150,10 @@ textarea {
     background-color: var(--primary-bg-color);
     color: white;
 
+}
+
+@media screen and (min-width: 769px) {
+    div.form_submittion_message {
+        
+    }
 }
