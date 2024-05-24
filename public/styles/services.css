@@ -137,7 +137,7 @@ div.contact_us {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0.5rem;
     display: flex;
     background-image: url('../images/contact_background2.jpg');
     background-position: 100%;
