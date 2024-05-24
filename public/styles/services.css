@@ -48,8 +48,7 @@ div.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    
+    gap: 1.4rem;
 }
 
 div.service {
@@ -71,11 +70,11 @@ div.service {
     transition: 0.25s ease-in;
 }
 
-div.service > img::selection {
-    background-color: transparent;
+div.service > svg {
+    transform: rotate(-45deg);
 }
 
-div.service > img:hover {
+div.service > svg:hover {
     cursor: pointer;
 }
 
@@ -92,6 +91,9 @@ div.service > div.text > p {
     font-size: 1rem
 }
 
+.dropdown_btn:hover {
+    cursor: pointer;
+}
 
 #services_heading {
     z-index: 2;
@@ -130,10 +132,6 @@ div.contact_us {
     background-image: url('../images/contact_background.jpg');
     background-position: center;
     background-size: cover;
-}
-
-#contact_img {
-    display: none;
 }
 
 div.contact_us > div.inner {
