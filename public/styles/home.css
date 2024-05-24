@@ -188,10 +188,10 @@ div.article_wrapper {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 90%;
+    width: 95%;
     margin: auto;
     max-width: 800px;
-    padding: 2rem;
+    padding: 2rem 1rem;
     margin-block: 50px;
     border-radius: 8px;
     position: relative; /* Ensure the pseudo-element is positioned relative to this */

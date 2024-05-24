@@ -2,15 +2,6 @@
 
 div.services_wrapper {
     width: 100%;
-    /*
-    --s: 300px; /* control the size   
-    --_g: #0000 90deg,var(--primary-font-color) 0;
-    background: 
-      conic-gradient(from 90deg at 2px 2px,var(--_g)),
-      conic-gradient(from 90deg at 1px 1px,var(--_g));
-    background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
-    background-position: center;
-    */
 }
 
 div.text {
@@ -25,14 +16,6 @@ div.text {
 }
 
 
-
-div.service > h2 {
-    margin: 0;
-    color: var(--primary-bg-color);
-    padding-bottom: 3px;
-    width: min-content;
-    text-wrap: nowrap;
-}
 
 div.text > p {
     margin: 0;
@@ -55,6 +38,7 @@ div.services_preview {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-image: linear-gradient(to right bottom, rgba(255, 166, 0, 0.6), rgb(255,0,0,0.8));
 }
 
 div.services {
@@ -65,12 +49,13 @@ div.services {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    
 }
 
 div.service {
     box-sizing: border-box;
     margin: auto;
-    width: 100%;
+    width: 90%;
     min-width: 250px;
     max-width: 450px;
     background-color: white;
@@ -95,12 +80,16 @@ div.service > img:hover {
 }
 
 div.service > h2 {
-    font-size: 0.80rem;
+    font-size: 1rem;
     width: 100%;
+    margin: 0;
+    color: var(--primary-bg-color);
+    padding-bottom: 3px;
 }
 
 div.service > div.text > p {
     font-family: var(--primary-font);
+    font-size: 1rem
 }
 
 
@@ -148,10 +137,11 @@ div.contact_us {
 }
 
 div.contact_us > div.inner {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 3rem 2rem;
     border-radius: 2px;
@@ -211,7 +201,7 @@ div.contact_us > div.inner > p {
     }
 
     div.service > h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     div.services > h2 {
