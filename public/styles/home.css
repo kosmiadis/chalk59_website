@@ -136,12 +136,14 @@ div.hero {
 }
 
 article.paragraph {
-    font-size: 1.1rem;
-    color: var(--mobile-font-color);
-    line-height: 1.6rem;
     text-align: center;
     max-width: 650px;
-    line-height: 1.8rem;
+}
+
+article.paragraph > p {
+    color: var(--mobile-font-color);
+    font-size: 1.1rem;
+    line-height: 2rem;
 }
 
 article.paragraph > h2 {
@@ -162,10 +164,10 @@ div.text_wrapper {
 }
 
 div.text {
-    width: 100%;
+    width: 100%;    
 }
 
-div.hero > div.services {
+div.hero > div.hero_services {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -181,7 +183,7 @@ div.article_wrapper {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 95%;
+    width: 90%;
     margin: auto;
     max-width: 800px;
     padding: 2rem;
@@ -201,43 +203,36 @@ div.article_wrapper > img {
     width: 82px;
 }
 
-div.text {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 100px;
-}
-
 div.hero_services {
-    padding: 2rem;
+    padding-block: 50px;
     display: flex;
     flex-direction: column;
     background-image: url('../images/services_background_2.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: min-content;
 }
 
 article.services {
+    align-self: center;
     backdrop-filter: blur(5px);
-    margin: auto;
-    padding-block: 2rem;
-    width: 100%;
+    padding: 3rem 1.5rem;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.4);
+    width: 90%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    padding: 1rem;
     max-width: 550px;
     font-size: 1.2rem;
     line-height: 1.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 article.services > h2 {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--primary-font-color);
     line-height: 2.3rem;
     text-align: center;
@@ -245,10 +240,9 @@ article.services > h2 {
 
 article.services > p {
     text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
 }
-
-
-
 
 #services_btn, a.button_primary {
     outline: unset;
@@ -260,6 +254,7 @@ article.services > p {
     font-weight: 600;
     border-radius: 8px;
     text-wrap: nowrap;
+    margin-top: 50px;
 }
 
 #services_btn:hover, a.button_primary:hover {
