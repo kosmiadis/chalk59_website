@@ -20,7 +20,7 @@ dropdownImgs.forEach(btn => {
 dropdownBtns.forEach(btn => {
     btn.addEventListener('click', e => {
         const text = e.target.parentNode.parentNode.querySelector('div.service_text'); // Adjust selector to fit your structure
-        if (text.style.height === '170px') {
+        if (text.style.height === '170px'|| text.style.height === '200px') {
             text.style.height = ''; // or '0px' if you want to explicitly set it to zero
         } else {
             closeDropdowns(); // Close other dropdowns before opening the clicked one
