@@ -25,6 +25,9 @@ dropdownBtns.forEach(btn => {
         } else {
             closeDropdowns(); // Close other dropdowns before opening the clicked one
             text.style.height = '170px';
+            if (window.innerWidth < 769) {
+                text.style.height = '200px';
+            }
         }
     });
 });
