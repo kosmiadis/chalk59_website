@@ -121,6 +121,8 @@ h2.service_inner_heading {
     text-align: left;
     color: var(--primary-font-color);
     font-size: 1.1rem;
+    width: min-content;
+    text-wrap: nowrap;
 }
 
 div.service_hero {

@@ -59,7 +59,7 @@ div.form {
     max-width: 450px;
     margin-inline: auto;
     margin-top: 4rem;
-    border-radius: 5px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);;
@@ -133,27 +133,26 @@ textarea {
     font-size: 1rem;
     font-weight: 600;
     margin: auto;
-    border-radius: 2px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-wrap: nowrap;
+    transition: 0.3s ease-in;
 }
 
 #contact_btn > p {
     margin: 0;
+    transition: 0.3s ease-in;
 }
 
 #contact_btn:hover {
     cursor: pointer;
     background-color: var(--primary-bg-color);
-    color: white;
-
 }
 
-@media screen and (min-width: 769px) {
-    div.form_submittion_message {
-        
-    }
+#contact_btn:hover > p {
+    color: var(--primary-font-color);
 }
+

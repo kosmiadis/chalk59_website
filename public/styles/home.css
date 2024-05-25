@@ -34,8 +34,6 @@ div.welcome {
     background-position: center;
 } 
 
-
-
 div.welcome > * {
     z-index: 3;
 }
@@ -65,12 +63,11 @@ div.inner_wrapper > h2 {
 }
 
 div.welcome > div.inner_wrapper >  button.hero_btn {
-    outline: none;
-    border: none;
     width: 250px;
     padding: 1rem 2rem;
     font-size: 1.2rem;
     margin: auto;
+    border-radius: 12px;
 
 }
 
@@ -81,7 +78,6 @@ div.welcome > div.inner_wrapper >  button.hero_btn {
     background-color: var(--primary-font-color);
     padding: 1rem 2rem;
     font-weight: 600;
-    border-radius: 2px;
     text-wrap: nowrap;
     color: white;
 }
