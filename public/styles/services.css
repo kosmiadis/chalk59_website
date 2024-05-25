@@ -6,6 +6,11 @@ div.services_wrapper {
     background-image: url('../images/services_background.jpg');
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.border {
@@ -15,34 +20,13 @@ div.border {
     transform: translateY(50%);
 }
 
-div.text {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    padding: 1rem;
-    padding-bottom: 2rem;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-div.text > p {
-    margin: 0;
-    padding-inline: 5px;
-    line-height: 1.7rem;
-    font-size: 1.1rem;
-    text-align: left;
-}
-
-#seminars_img {
-    height: 420px;
-}
-
 div.services_preview > * {
     box-sizing: border-box;
     font-family: var(--primary-font);
 }
+
 div.services_preview {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,51 +41,60 @@ div.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.4rem;
 }
 
-div.service {
-    box-sizing: border-box;
+div.services > div.service_wrapper {
+    display: flex;
+    flex-direction: column;
     margin: auto;
     width: 90%;
-    min-width: 250px;
-    max-width: 450px;
+    max-width: 550px;
+}
+
+div.service_wrapper > div.service_text {
+    height: 0;
+    overflow-y: hidden;
+    background-color: var(--primary-font-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.service_wrapper > div.service_text > p {
+    padding: 2rem;
+    color: white;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+}
+
+button.service {
+    position: relative;
+    border: unset;
+    outline: unset;
+    box-sizing: border-box;
+    height: 80px;
     background-color: white;
-    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 48px;
     align-items: center;
-    height: 80px;
-    overflow: hidden;
     border-left: 5px solid var(--primary-font-color);
-    border-radius: 4px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.37);
     transition: 0.25s ease-in;
+    z-index: 3;
 }
 
-div.service > svg {
-    transform: rotate(-45deg);
-}
-
-div.service > svg:hover {
+button.service:hover {
     cursor: pointer;
+    background-color: lightgrey;
 }
 
-div.service > h2 {
-    font-size: 1rem;
+button.service > h2 {
+    padding: 1rem;
+    font-size: 1.2rem;
     width: 100%;
     margin: 0;
     color: var(--primary-bg-color);
-    padding-bottom: 3px;
-}
-
-div.service > div.text > p {
-    font-family: var(--primary-font);
-    font-size: 1rem
-}
-
-.dropdown_btn:hover {
-    cursor: pointer;
 }
 
 #services_heading {
@@ -121,7 +114,11 @@ h2.service_inner_heading {
     text-align: left;
     color: var(--primary-font-color);
     font-size: 1.1rem;
-    width: min-content;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-wrap: nowrap;
 }
 
@@ -194,17 +191,16 @@ div.contact_us > div.inner > p {
     
     div.services {
         margin: auto;
-        gap: 1.5rem;
+        gap: 0;
     }
 
-    div.service {
+    button.service {
         flex-direction: row;
-        width: 90%;
         max-width: 750px;
         gap: unset;
     }
 
-    div.service > h2 {
+    button.service > h2 {
         font-size: 1.3rem;
     }
 

@@ -156,7 +156,7 @@ article.paragraph > h2 {
 div.text_wrapper {
     padding-top: 3rem;
     width: 100%;
-    margin-inline: auto;
+    min-height: 100vh;
     --s: 300px; /* control the size */    
     --_g: #0000 90deg,var(--primary-font-color) 0;
     background: 
@@ -166,16 +166,9 @@ div.text_wrapper {
     background-position: center;
 }
 
-div.text {
-    width: 100%;    
-}
-
-div.hero > div.hero_services {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+div.text.summary {
+    width: 100%; 
+    flex-direction: column;   
 }
 
 div.article_wrapper {
@@ -191,8 +184,8 @@ div.article_wrapper {
     margin: auto;
     max-width: 800px;
     padding: 2rem 1rem;
-    margin-block: 50px;
     border-radius: 12px;
+    padding-block: 50px;
     position: relative; /* Ensure the pseudo-element is positioned relative to this */
     overflow: hidden; /* Prevents the pseudo-element from overflowing the rounded corners */
 }
@@ -223,8 +216,8 @@ div.hero_services {
     background-size: cover;
     background-position: center;
     height: 100vh;
-
 }
+
 article.services {
     display: flex;
     flex-direction: column;
@@ -294,7 +287,7 @@ article.services > p {
         font-size: 5rem;
     }
 
-    div.text {
+    div.text.summary {
         background-color: unset;
         display: flex;
     }  
@@ -311,7 +304,7 @@ article.services > p {
     a.button_primary {
         flex-wrap: wrap;
     }
-    div.inner_wrapper > div.text > h2 {
+    div.inner_wrapper > div.text.summary > h2 {
         text-align: left;
     }
 }
