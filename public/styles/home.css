@@ -134,65 +134,52 @@ div.hero {
     width: 100%;
 }
 
-article.paragraph {
-    text-align: center;
-    max-width: 650px;
-}
-
 article.paragraph > p {
-    font-size: 1.1rem;
-    line-height: 2rem;
-    color: white;
-    text-shadow: 2px 2px 3px var(--primary-font-color);
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: black;
 }
 
 article.paragraph > h2 {
+    font-size: 1.5rem;
     font-style: italic;
     padding-bottom: 12px;
+    color: var(--primary-font-color);
+}
+
+div.article_wrapper.second {
+    background-color: var(--primary-font-color);
+}
+
+#white_p {
     color: white;
-    text-shadow: 1px 1px 2px var(--primary-font-color);
+}
+
+#white_heading {
+    color: white;
 }
 
 div.text_wrapper {
-    padding-top: 3rem;
     width: 100%;
-    min-height: 100vh;
-    --s: 300px; /* control the size */    
-    --_g: #0000 90deg,var(--primary-font-color) 0;
-    background: 
-      conic-gradient(from 90deg at 2px 2px,var(--_g)),
-      conic-gradient(from 90deg at 1px 1px,var(--_g));
-    background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
-    background-position: center;
 }
 
 div.inner_hero_wrapper {
-    padding: 100px 2rem;
     width: 100%; 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: row;   
     flex-wrap: wrap;
-    row-gap: 2rem;
-    column-gap: 2rem;
 }
 
-div.article_wrapper {
-    height: 100%;
-    max-height: 600px;
-    background: rgba(255, 255, 255, 0.8);
-    background-image: linear-gradient(to right bottom, rgba(255, 166, 0, 0.6), rgb(255,0,0,0.8));
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5);
+div.article_wrapper {   
+    padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    width: 95%;
-    max-width: 450px;
-    padding: 2rem 1rem;
-    border-radius: 12px;
+    width: 100%;
     padding-block: 50px;
     position: relative; /* Ensure the pseudo-element is positioned relative to this */
     overflow: hidden; /* Prevents the pseudo-element from overflowing the rounded corners */
@@ -211,8 +198,14 @@ div.article_wrapper:last-child {
    margin-bottom: 100px; 
 }
 
-div.article_wrapper > img {
-    width: 82px;
+div.article_wrapper > div.image_holder {
+    width: 100%;
+}
+
+div.article_wrapper > div.image_holder > img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px rgb(0,0,0, 0.4);
 }
 
 div.hero_services {
@@ -275,6 +268,10 @@ article.services > p {
 
 @media screen and (min-width: 769px) {
 
+    div.inner_hero_wrapper {
+        padding: 0;
+    }
+
     div.article_wrapper:first-child {
         margin-top: unset;
     }
@@ -284,7 +281,57 @@ article.services > p {
     }
 
     div.article_wrapper {
+        background-color: white;
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    div.article_wrapper:nth-child(2) {
+        background-color: var(--primary-font-color);
+    }
+
+    article.secondary.paragraph {
+        order:2;
+    }
+    
+
+    article.paragraph {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    article.paragraph > p {
+        margin: 0;
+        font-size: 1.3rem;
+        color: black;
         padding: 2rem;
+    }
+
+    
+    #white_p {
+        color:white;
+        text-align: right;
+    }
+    
+    article.paragraph > h2 {
+        line-height: 0;
+        width: 100%;
+        padding-inline: 2rem;
+        color: var(--primary-font-color);
+        text-align: left;
+        margin: 0;
+    }
+
+    #white_heading {
+        color: white;
+        text-align: right;
     }
 
     div.welcome {
@@ -296,11 +343,6 @@ article.services > p {
         font-size: 5rem;
     }
 
-    div.text.summary {
-        background-color: unset;
-        display: flex;
-    }  
-
     article.services > p {
         font-size: 1.1rem;
     }
@@ -309,7 +351,7 @@ article.services > p {
         flex-wrap: wrap;
     }
 
-    div.inner_wrapper > div.text.summary > h2 {
-        text-align: center;
+    div.article_wrapper > div.image_holder >  img {
+        width: 100%;
     }
 }

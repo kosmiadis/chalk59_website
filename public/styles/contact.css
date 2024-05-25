@@ -25,7 +25,7 @@ div.loader {
 div.form_submittion_message {
     position: absolute;
     left: 50%;
-    top: 12px;
+    top: 30px;
     transform: translateX(-50%);
     z-index: 4;
     opacity: 0;
@@ -58,7 +58,7 @@ div.form {
     width: 90%;
     max-width: 450px;
     margin-inline: auto;
-    margin-top: 4rem;
+    margin-top: 80px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -70,6 +70,7 @@ div.form {
 div.form > h2 {
     color: var(--primary-font-color);
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #contact_form {

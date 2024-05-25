@@ -124,6 +124,8 @@ div.links > ul {
 
 div.links > ul > li:hover div.line {
     visibility: visible;
+
+    background-color: var(--primary-font-color);
     width: 100%;
 }
 
