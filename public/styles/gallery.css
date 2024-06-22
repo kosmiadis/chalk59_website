@@ -46,10 +46,12 @@ img.gallery_img {
     position: sticky;
     top: 102px;
     text-align: center; /* Align buttons to the center */
-    display: grid;
-    grid-template-columns: repeat(4, min-content);
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 8px;
+    row-gap: 8px;
     justify-content: center;
+    align-items: center;
 }
 
 .filters button {

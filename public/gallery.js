@@ -1,14 +1,13 @@
 const all_images = document.querySelectorAll('.gallery_img')
 const allBtn = document.querySelector('#all')
-const generalBtn = document.querySelector('#general_btn')
-const candlesBtn = document.querySelector('#candles_btn')
-const decorationsBtn = document.querySelector('#decorations_btn')
 const allButtons = document.querySelectorAll('.filter')
 
 //images
 const generalImages = document.querySelectorAll('.general_category')
 const decorationsImages = document.querySelectorAll('.decorations_category')
 const candlesImages = document.querySelectorAll('.candles_category')
+const furnitureImages = document.querySelectorAll('.furniture_category')
+
 
 let indexFilter = allButtons[0]
 
